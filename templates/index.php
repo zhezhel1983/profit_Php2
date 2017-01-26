@@ -18,9 +18,13 @@
     <h1>Все новости</h1>
     <ul>
     <?php
-        foreach ($data as $article): ?>
-            <li class="title"><a href="/article.php?id=<?php echo $article->id; ?>"><?php echo $article->title; ?></a></li>
+        foreach ($news as $article) : ?>
+            <li class="title"><?php echo $article->title; ?></li>
             <li class="text"><?php echo $article->text; ?></li>
+
+            <?php if (!empty($article->author)) : ?>
+                Автор: <?php echo $article->author->name; ?>
+            <?php endif;?>
         <?php endforeach; ?>
     </ul>
 </body>

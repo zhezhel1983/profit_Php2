@@ -2,7 +2,7 @@
 
 require __DIR__ . '/autoload.php';
 
-$data = \App\Models\Article::findAll();
+$news = \App\Models\Article::findAll();
 //var_dump($data);
 //вывести все findAll()
 include __DIR__ . '/templates/index.php';

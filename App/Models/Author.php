@@ -8,9 +8,8 @@ class Author
     extends Model
 {
 
-    public static $table = 'authors';
+    const TABLE = 'authors';
 
-    public $firstname;
-    public $lastname;
+    public $name;
 
 }
