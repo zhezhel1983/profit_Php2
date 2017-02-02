@@ -8,32 +8,17 @@ class Article
     extends Model
 {
 
-    public static $table = 'news';
+    protected static $table = 'news';
 
     public $title;
     public $text;
+    public $author_id;
+
 // Выводит к примеру 2 последние новости из базы
     public static function getLast($num = 2)
     {
         return self::findLast($num);
     }
-}
-
-/**
- * Class News
- * @package App\Models
- *
- * @property \App\Models\Article $author
- */
-class News
-    extends Model
-{
-
-    const TABLE = 'news';
-
-    public $title;
-    public $text;
-    public $author_id;
 
     /**
      * LAZY LOAD
